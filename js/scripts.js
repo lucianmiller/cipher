@@ -1,7 +1,7 @@
 $(document).ready(function() {
   let userSentence = prompt("Write a sentence:");
   console.log(userSentence)
-  upperCaseFirstLast(userSentence);
+  mainFunction(userSentence);
 });
 
 const upperCaseFirstLast = function(sentence) {
@@ -12,6 +12,16 @@ const upperCaseFirstLast = function(sentence) {
   console.log("first char: " + firstChar);
   console.log("last char: " + lastChar);
   alert("first char: " + firstChar + " last char: " + lastChar);
-  return;
+  return firstChar + lastChar;
 };
 
+const reverseFirstLast = function(chars) {
+  reverseString = chars.charAt(1) + chars.charAt(0);
+  console.log(reverseString)
+  return reverseString;
+};
+
+const mainFunction = function(string) {
+  const capLetters = upperCaseFirstLast(string);
+  reverseFirstLast(capLetters);
+};
