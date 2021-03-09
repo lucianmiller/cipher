@@ -14,3 +14,4 @@ const upperCaseFirstLast = function(sentence) {
   alert("first char: " + firstChar + " last char: " + lastChar);
   return;
 };
+
