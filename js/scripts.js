@@ -1,7 +1,7 @@
 $(document).ready(function() {
   let userSentence = prompt("Write a sentence:");
   console.log(userSentence)
-  mainFunction(userSentence);
+  alert(mainFunction(userSentence));
 });
 
 const upperCaseFirstLast = function(sentence) {
@@ -30,5 +30,8 @@ const halfOfSentence = function(sentence) {
 const mainFunction = function(string) {
   const capLetters = upperCaseFirstLast(string);
   let newString = halfOfSentence(string) + string + reverseFirstLast(capLetters);
+  let finalCipher = newString.split("").reverse().join("");
   console.log(newString);
+  console.log(finalCipher);
+  return finalCipher;
 };
