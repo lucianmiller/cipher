@@ -17,11 +17,18 @@ const upperCaseFirstLast = function(sentence) {
 
 const reverseFirstLast = function(chars) {
   reverseString = chars.charAt(1) + chars.charAt(0);
-  console.log(reverseString)
+  console.log(reverseString);
   return reverseString;
+};
+
+const halfOfSentence = function(sentence) {
+  let oneHalf = sentence.charAt(sentence.length / 2);
+  console.log(oneHalf);
+  return oneHalf;
 };
 
 const mainFunction = function(string) {
   const capLetters = upperCaseFirstLast(string);
-  reverseFirstLast(capLetters);
+  let newString = halfOfSentence(string) + string + reverseFirstLast(capLetters);
+  console.log(newString);
 };
